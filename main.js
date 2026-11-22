@@ -152,3 +152,33 @@ const windowResize = () => {
 
 window.addEventListener("mousemove", mouseMove);
 window.addEventListener("resize", windowResize);
+
+// Certificate Lightbox Modal
+function openCertModal(imageSrc, title) {
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("certModalImg");
+  const modalTitle = document.getElementById("certModalTitle");
+  const modalLink = document.getElementById("certModalLink");
+  if (!modal || !modalImg) return;
+
+  modalImg.src = imageSrc;
+  modalImg.alt = title || "Certificate Preview";
+  if (modalTitle) modalTitle.textContent = title || "";
+  if (modalLink) modalLink.href = imageSrc;
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("stopscrolling");
+}
+
+function closeCertModal() {
+  const modal = document.getElementById("certModal");
+  if (!modal) return;
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("stopscrolling");
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeCertModal();
+});

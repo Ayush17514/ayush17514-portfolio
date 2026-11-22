@@ -2333,6 +2333,181 @@ footer {
     transform: translateX(3px);
 }
 
+/* Certificate Lightbox Modal */
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.cert-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cert-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 5, 12, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.cert-modal-dialog {
+    position: relative;
+    z-index: 10;
+    max-width: 920px;
+    width: 92vw;
+    max-height: 90vh;
+    background: #0d0a1a;
+    border: 1px solid rgba(128, 0, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(128, 0, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-modal.active .cert-modal-dialog {
+    transform: scale(1);
+}
+
+.cert-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cert-modal-title {
+    font-family: fira code;
+    font-size: 1.35rem;
+    color: var(--color-white);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 15px;
+}
+
+.cert-modal-close {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.cert-modal-close:hover {
+    background: rgba(255, 60, 60, 0.35);
+    border-color: #ff4d4d;
+    color: #ff9999;
+    transform: rotate(90deg);
+}
+
+.cert-modal-body {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    max-height: calc(90vh - 125px);
+    background: #06050e;
+}
+
+.cert-modal-img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cert-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cert-modal-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(128, 0, 255, 0.2);
+    border: 1px solid var(--color-purple);
+    color: var(--color-white);
+    font-family: fira code;
+    font-size: 1.2rem;
+    padding: 7px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.cert-modal-download-btn svg {
+    stroke: var(--color-white);
+}
+
+.cert-modal-download-btn:hover {
+    background: var(--color-purple);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(128, 0, 255, 0.4);
+}
+
+body.light-mode .cert-modal-dialog {
+    background: #ffffff;
+    border-color: rgba(128, 0, 255, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 25px rgba(128, 0, 255, 0.15);
+}
+
+body.light-mode .cert-modal-header {
+    background: #f7f7fc;
+    border-color: #e5e5ee;
+}
+
+body.light-mode .cert-modal-title {
+    color: #151520;
+}
+
+body.light-mode .cert-modal-close {
+    background: #e9e9f0;
+    border-color: #d0d0dc;
+    color: #222;
+}
+
+body.light-mode .cert-modal-body {
+    background: #f0f0f7;
+}
+
+body.light-mode .cert-modal-footer {
+    background: #f7f7fc;
+    border-color: #e5e5ee;
+}
+
 /* Responsive */
 @media screen and (max-width: 1024px) {
 
