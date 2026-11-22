@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMWDE0VTD3"></script>
   <script>
@@ -11,7 +12,7 @@
 
     gtag("config", "G-YMWDE0VTD3");
   </script>
-  
+
   <meta name="google-site-verification" content="zMNl24ruDnyqiliYwKNU_r09OkPCDKz0kMBtF9nqiCc" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +20,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
   <meta name="description"
-    content="Ayush Agrawal | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
+    content="Ayush Agrawal | Portfolio. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
   <meta name="keywords"
     content="Ayush Agrawal,Ayush Agrawal portfolio,Ayush Agrawal Portfolio,AyushAgrawal,Ayushagrawal site,Ayush Agrawal Site,Ayush Agrawal me,Ayush Agrawal web,Ayush Agrawal github,Ayush Agrawal site,Ayush Agrawal frontend developer,frontend developer,Ayush Agrawal jaipur,Ayush jaipur" />
   <meta name="author" content="Ayush Agrawal" />
@@ -28,7 +29,7 @@
     content="Hi! My name is Ayush Agrawal. I'm a web developer. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
 
   <title>Ayush Agrawal | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  <link rel="icon" type="image/x-icon" href="src/assets/ui/main-favicon.png" />
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- stylesheet -->
@@ -36,10 +37,11 @@
   <!-- google fonts-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+</head>
 
 <body class="body">
   <audio loop="" id="audioPlayer" style="display: none">
-    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
+    <source src="src/assets/audio/preloader.mp3" type="audio/mp3" />
   </audio>
   <div id="preloader"></div>
   <noscript>Allow Javascript</noscript>
@@ -50,34 +52,52 @@
 
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
-      <div class="logo" tabindex="0" aria-label="vinod jangid logo">
+      <div class="logo" tabindex="0" aria-label="Ayush Agrawal logo">
         <div class="logo-top">
-          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+          <img src="src/assets/ui/nav-avatar.png" alt="animation-head" id="nav-avatar" />
         </div>
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
-          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+          <li class="home activeThistab navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
             <a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
             </a>
           </li>
 
-          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+          <li class="about navbar-tabs-li" data-aos="fade-down" data-aos-delay="200">
             <a href="#about" aria-label="about menu button">
               &#60;/AboutMe&#62;
             </a>
           </li>
 
-          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+          <li class="experience navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+            <a href="#experience" aria-label="experience menu button">
+              &#60;/Experience&#62;
+            </a>
+          </li>
+
+          <li class="skills navbar-tabs-li" data-aos="fade-down" data-aos-delay="400">
             <a href="#skills" aria-label="skills menu button">
               &#60;/Skills&#62;
             </a>
           </li>
 
-          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+          <li class="projects navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
             <a href="#projects" aria-label="projects menu button">
               &#60;/Projects&#62;
+            </a>
+          </li>
+
+          <li class="patent navbar-tabs-li" data-aos="fade-down" data-aos-delay="600">
+            <a href="#patent" aria-label="patent menu button">
+              &#60;/Patent&#62;
+            </a>
+          </li>
+
+          <li class="certifications navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+            <a href="#certifications" aria-label="certifications menu button">
+              &#60;/Certifications&#62;
             </a>
           </li>
         </ul>
@@ -87,7 +107,7 @@
   </header>
   <!-- header ends here -->
 
-  <main>
+  <main class="main">
     <!-- hamburger -->
     <div class="hamburger" id="hamburger" data-aos="fade">
       <div class="hamburgerbase">
@@ -112,6 +132,11 @@
             &#60;/AboutMe&#62;
           </a>
         </li>
+        <li id="experience-mobile-tab" class="mobile-navbar-tabs-li experience" onclick="hidemenubyli()">
+          <a href="#experience" tabindex="0" aria-label="experience menu button">
+            &#60;/Experience&#62;
+          </a>
+        </li>
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
           <a href="#skills" tabindex="0" aria-label="skills menu button">
             &#60;/Skills&#62;
@@ -120,6 +145,16 @@
         <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
           <a href="#projects" tabindex="0" aria-label="projects menu button">
             &#60;/Projects&#62;
+          </a>
+        </li>
+        <li id="patent-mobile-tab" class="mobile-navbar-tabs-li patent" onclick="hidemenubyli()">
+          <a href="#patent" tabindex="0" aria-label="patent menu button">
+            &#60;/Patent&#62;
+          </a>
+        </li>
+        <li id="certifications-mobile-tab" class="mobile-navbar-tabs-li certifications" onclick="hidemenubyli()">
+          <a href="#certifications" tabindex="0" aria-label="certifications menu button">
+            &#60;/Certifications&#62;
           </a>
         </li>
       </ul>
@@ -131,6 +166,8 @@
 
       <div class="text-content">
         <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
+          <br> </br>
+          <br> </br>
           <p class="jello">N</p>
           <p class="jello">a</p>
           <p class="jello">m</p>
@@ -197,14 +234,12 @@
           </div>
         </article>
         <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          Web Developer with experience of Frontend Web
-          Designs with Backend Integration. I Love fun Web UI, collaboration and making products.<br />
-          <br />
-          I value simple content structure, clean design patterns, and
-          thoughtful interactions.
+          Full-Stack Software Developer with hands-on experience in full-stack architecture, GIS-based mapping, and AI
+          automation. Former intern at <strong>Taumata Arowai (Education New Zealand)</strong> &amp; Co-Inventor of a
+          published Indian patent.
         </p>
         <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:ayushagrawal0426@gmail.com" tabindex="-1">
+          <a href="mailto:Ayushagrawal0429@gmail.com" tabindex="-1">
             <button class="letsTalkBtn">
               <p class="letsTalkBtn-text">Let's Talk!</p>
               <span class="letsTalkBtn-BG"></span>
@@ -231,9 +266,10 @@
         </div>
         <!-- contact-btn-div -->
       </div>
-     
     </section>
     <!-- landing page ends here -->
+
+    <!-- About Me Section -->
     <section class="about-section-container" id="about" data-aos="fade-up">
       <div class="about-section">
         <div class="section-heading">
@@ -246,47 +282,74 @@
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Hi! My name is Ayush. I'm a Web developer. I love creating things that exist on the internet. My interest in web development started in 2024 when I decided to opt for B.Tech in Computer Science Engineering.
-            </p>
+              Hi! My name is Ayush Agrawal. I'm a Currently pursuing a degree in Computer Science at Poornima
+              University, with an expected graduation in April 2028. Gained experience as an Intern at Education New
+              Zealand, contributing to technology projects while applying skills in Microsoft Azure, full-stack
+              development, and software development. </p>
             <br />
             <p tabindex="0">
-              Instead of creating only Static website, i started
-              enjoying web development with Backend logics. Creating custom things for web taught
-              me a lot about design & development!
-            </p>
+              Completed multiple certifications, including a Google Cloud Cybersecurity Certificate and a JPMorgan Chase
+              & Co. Software Engineering Job Simulation. Co-invented a hybrid cart and wishlist synchronization system
+              for e-commerce platforms, showcasing technical problem-solving and innovation. Focused on enhancing
+              technical expertise and delivering impactful software solutions.</p>
             <br />
-            <p tabindex="0">
-              My main focus these days is building interesting & creative web
-              designs.I am Proficient in
-              programming languages like  HTML,CSS,Javascript & C/C++ 
-              and eager to apply technical skills to real-world
-              problems. Strong problem-solving abilities and a keen
-              interest in staying up-to-date with industry trends. Looking
-              to leverage my skills and knowledge to contribute to a
-              dynamic team and grow as a software engineer
-              
-            </p>
-             <!-- Resume button -->
-      <button class="resume-btn" id="resume-btn" onclick="openURL()">
-        <div class="sign">
-          <svg viewBox="0 0 640 512">
-            <path
-              d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-          </svg>
-        </div>
-
-        <div class="text">Resume</div>
-      </button>
+            <!-- Resume button -->
+            <button class="resume-btn" id="resume-btn" onclick="openURL()">
+              <div class="sign">
+                <svg viewBox="0 0 640 512">
+                  <path
+                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                </svg>
+              </div>
+              <div class="text">Resume</div>
+            </button>
           </div>
 
           <div class="dp" data-aos="fade-up">
-            <img src="WhatsApp Image 2026-02-24 at 7.07.02 PM.jpeg" alt="Ayush Agrawal" tabindex="0" aria-label="image of Ayush" />
+            <img src="src/assets/profile/Profile_Picture.jpeg" alt="Ayush Agrawal" tabindex="0" aria-label="image of Ayush" />
           </div>
         </div>
       </div>
     </section>
-    <!-- about section ends  -->
+    <!-- about section ends -->
 
+    <!-- Experience Section -->
+    <section class="experience-section-container" id="experience" data-aos="fade-up">
+      <div class="experience-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="Work experience">
+            &#60;/Experience&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="experience-boxes-div">
+          <div data-aos="fade-up" class="experience-box-wrapper">
+            <div class="experience-box">
+              <img src="src/assets/watermarks/nz-fern.png" alt="New Zealand Silver Fern watermark" class="experience-bg-leaf" />
+              <article class="exp-role">Software Engineering Intern</article>
+              <h4 class="exp-company">Taumata Arowai Water Services &bull; Education New Zealand Manapou ki te Ao</h4>
+              <p class="exp-description">
+                Developed GIS-based frontend features using React, TypeScript, Vite, and Leaflet to visualize drinking
+                water supply zones across New Zealand. Integrated complex GeoJSON datasets and CSV/Excel data with
+                responsive spatial map layers, environment configuration, and collaborative Git/GitHub workflows.
+              </p>
+              <div class="exp-tech-list">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Leaflet GIS</span>
+                <span>GeoJSON</span>
+                <span>REST APIs</span>
+                <span>Git/GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- experience section ends -->
+
+    <!-- Skills Section -->
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
         <div class="section-heading" data-aos="fade-up">
@@ -298,69 +361,101 @@
 
         <div class="frontend-dev-section">
           <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
-            aria-label="As a frontend a developer these are the skills i have">
+            aria-label="As a developer these are the skills i have">
             Tech Stack
           </h3>
           <ul class="tech-stack-wrapper">
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
               <span class="tooltip">HTML</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/csslogo.png" alt="css skill" class="tech-stack-logo" />
               <span class="tooltip">CSS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/jslogo.png" alt="js skill" class="tech-stack-logo" />
               <span class="tooltip">JS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/tailwind.png" alt="tailwind skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/typescript.png" alt="typescript skill" class="tech-stack-logo" />
+              <span class="tooltip">TYPESCRIPT</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/react.svg" alt="react skill" class="tech-stack-logo" />
+              <span class="tooltip">REACT</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/tailwind.png" alt="tailwind skill" class="tech-stack-logo" />
               <span class="tooltip">TAILWIND</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
+              <img src="src/assets/logos/java.png" alt="java skill" class="tech-stack-logo" />
+              <span class="tooltip">JAVA</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
-              <span class="tooltip">GIT</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/clogo.png" alt="c language skill" class="tech-stack-logo" />
-              <span class="tooltip">C</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/cpplogo.png" alt="c++ language skill" class="tech-stack-logo" />
-              <span class="tooltip">C++</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/pythonlogo.png" alt="photoshop skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/pythonlogo.png" alt="python skill" class="tech-stack-logo" />
               <span class="tooltip">PYTHON</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/php.png" alt="figma skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/clogo.png" alt="c language skill" class="tech-stack-logo" />
+              <span class="tooltip">C</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/cpplogo.png" alt="c++ language skill" class="tech-stack-logo" />
+              <span class="tooltip">C++</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/php.png" alt="php skill" class="tech-stack-logo" />
               <span class="tooltip">PHP</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/mySQLlogo.png" alt="adobe illustrator skill" class="tech-stack-logo" />
+              <img src="src/assets/logos/node.png" alt="node js skill" class="tech-stack-logo" />
+              <span class="tooltip">NODE.JS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/mySQLlogo.png" alt="mysql skill" class="tech-stack-logo" />
               <span class="tooltip">MySQL</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/mongodb.png" alt="mongodb skill" class="tech-stack-logo" />
+              <span class="tooltip">MONGODB</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/leaflet.png" alt="leaflet gis skill" class="tech-stack-logo" />
+              <span class="tooltip">LEAFLET GIS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/gitlogo.png" alt="git skill" class="tech-stack-logo" />
+              <span class="tooltip">GIT</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="src/assets/logos/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
+              <span class="tooltip">GITHUB</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
     <!-- skills section ends -->
+
+    <!-- Projects Section -->
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
         <div class="section-heading" data-aos="fade-up">
@@ -370,113 +465,273 @@
           <p class="sectionHeadingP"></p>
         </div>
         <div class="project-boxes-div">
+          <!-- Project 1 -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="./src/png/eventlogo.png" alt="atomic asher website favicon" class="faviconforProject" />
                 <article class="ProjectHeading">Prayogam2025</article>
                 <p class="ProjectDescription">
-                Prayogam:The platform served as a
-                central hub for participants and organizers, featuring
-                event details, mentor profiles, a live countdown,
-                participants registration, and a project evaluation system.
+                  Official platform for Prayogam 2025 techfest. Served as the central hub for participants and
+                  organizers, featuring event details, mentor profiles, a live countdown, participant registration, and
+                  a project evaluation system.
                 </p>
                 <div class="project-buttons">
                   <a href="https://prayogam2025.jaincabs.in/" target="_blank" class="cta"
-                    aria-label="Visit atomicasher Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
+                    aria-label="Visit prayogam Live">
+                    <span>Live</span>
+                  </a>
+                  <a href="https://github.com/Ayush17514/prayogam2025" target="_blank" class="cta"
+                    aria-label="Visit prayogam on GitHub">
+                    <span>GitHub</span>
                   </a>
                 </div>
               </div>
               <div class="image-div">
-                <img src="./src/png/prayogam.png" alt="atomicasher website preview image" />
+                <img src="src/assets/projects/prayogam.png" alt="prayogam website preview image" />
               </div>
             </div>
           </div>
-          <!-- ---------------------- -->
+
+          <!-- Project 2 -->
           <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box project-box2">
               <div class="info-div">
-                <img src="src/ico/stopscams-favicon.ico" alt="stopscams website favicon" class="faviconforProject" />
                 <article class="ProjectHeading">Manbhar</article>
                 <p class="ProjectDescription">
-                  Manbhar is a B2C  jewelry brand specializing in custom-made, on-order designs. Blending traditional craftsmanship with modern aesthetics, Manbhar offers personalized ornaments tailored to each customer's style and occasion.
+                  Manbhar is a B2C jewelry brand specializing in custom-made, on-order designs. Built and deployed a
+                  dynamic e-commerce platform with authentication, cart, wishlist, personalized design flows, and
+                  checkout.
                 </p>
                 <div class="project-buttons">
-                  <a href="https://manbhar.jaincabs.in" target="_blank" class="cta"
-                    aria-label="Visit stopscams Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
+                  <a href="https://manbharjewels.hstn.me/" target="_blank" class="cta" aria-label="Visit manbhar Live">
+                    <span>Live</span>
+                  </a>
+                  <a href="https://github.com/Ayush17514/Manbhar" target="_blank" class="cta"
+                    aria-label="Visit manbhar on GitHub">
+                    <span>GitHub</span>
                   </a>
                 </div>
               </div>
               <div class="image-div">
-                <img src="./src/png/manbhar.png" alt="stopscams website preview image" />
+                <img src="src/assets/projects/manbhar.png" alt="manbhar website preview image" />
               </div>
             </div>
           </div>
-          <!-- ---------------------- -->
+
+          <!-- Project 3 -->
           <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box project-box2">
               <div class="info-div">
-                <img src="src/ico/notesync-favicon.ico" alt=" portfolio  website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Portfolio Website</article>
+                <article class="ProjectHeading">Document Formatter</article>
                 <p class="ProjectDescription">
-                  This portfolio showcases my academic projects, technical skills, and creative problem-solving through real-world applications in web development, programming, and design.
+                  An AI-powered tool that automates journal-specific document formatting using Gemini AI. Supports 30+
+                  publication standards with automated citation structuring, LaTeX equations, and formatting compliance.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://document-formatter-maf2.onrender.com/" target="_blank" class="cta"
+                    aria-label="Visit Document Formatter Live">
+                    <span>Live</span>
+                  </a>
+                  <a href="https://github.com/Ayush17514/Document-Formatter" target="_blank" class="cta"
+                    aria-label="Visit Document Formatter on GitHub">
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/assets/projects/document-formatter.jpg" alt="Document Formatter ManuscriptAI preview" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2">
+              <div class="info-div">
+                <article class="ProjectHeading">Portfolio</article>
+                <p class="ProjectDescription">
+                  This portfolio showcases my academic projects, technical skills, and creative problem-solving through
+                  real-world applications in web development, programming, and design.
                 </p>
                 <div class="project-buttons">
                   <a href="https://ayush17514.github.io/ayush17514-portfolio/" target="_blank" class="cta"
-                    aria-label="Visit NoteSync Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
+                    aria-label="Visit Portfolio Live">
+                    <span>Live</span>
+                  </a>
+                  <a href="https://github.com/Ayush17514/ayush17514-portfolio" target="_blank" class="cta"
+                    aria-label="Visit Portfolio on GitHub">
+                    <span>GitHub</span>
                   </a>
                 </div>
               </div>
               <div class="image-div">
-                <img src="./src/png/portfolio_site.png" alt=" portfolio website preview image" />
+                <img src="src/assets/projects/portfolio_site.png" alt="portfolio website preview image" />
               </div>
             </div>
           </div>
-          <!-- ---------------------- 
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/ico/wyd-favicon.ico" alt="withyourdog website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">With Your Dog</article>
-                <p class="ProjectDescription">
-                  WithYour.Dog: Discover dog-friendly places near you with our simple Airtable-powered app, integrated with Ola Maps for seamless navigation.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://withyour.dog" target="_blank" class="cta"
-                    aria-label="Visit withyourdog Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/wyd-preview.webp" alt="withyourdog website preview image" />
-              </div>
-            </div>
-          </div> -->
-          
-
         </div>
       </div>
     </section>
+    <!-- projects section ends -->
+
+    <!-- Patent Section -->
+    <section class="patent-section-container" id="patent" data-aos="fade-up">
+      <div class="patent-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="Patent and research">
+            &#60;/Patent&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="patent-boxes-div">
+          <div data-aos="fade-up" class="patent-box-wrapper">
+            <div class="patent-box">
+              <img src="src/assets/watermarks/sarnath.png" alt="Sarnath Lion Capital watermark" class="patent-bg-symbol" />
+              <div class="patent-box-inner">
+                <div class="patent-content">
+                  <article class="patent-heading">Hybrid Cart & Wishlist Synchronization System for E-commerce Platforms
+                  </article>
+                  <p class="patent-sub">Co-Inventor — Indian Patent Office
+                  </p>
+                  <p class="patent-meta-info">Application No: 202511130507 &bull; Filed Dec 2025 &bull; Published Jan
+                    2026 &bull; India</p>
+                  <div class="project-buttons" style="margin-top: 15px;">
+                    <a href="https://www.goveda.com/patent/IN-202511130507-A" target="_blank" class="cta"
+                      aria-label="View patent on LinkedIn">
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- patent section ends -->
+
+    <!-- Certifications Section -->
+    <section class="certifications-section-container" id="certifications" data-aos="fade-up">
+      <div class="certifications-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="Licenses and certifications">
+            &#60;/Certifications&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="cert-cards-grid">
+          <!-- Microsoft Azure -->
+          <div class="cert-item-box" data-aos="fade-up">
+            <div class="cert-company-logo-wrap">
+              <img src="src/assets/certificates/microsoft.svg" alt="Microsoft logo" class="cert-company-logo" />
+            </div>
+            <div class="cert-content">
+              <article class="cert-title">Microsoft Certified: Azure Fundamentals</article>
+              <p class="cert-issuer">Microsoft</p>
+              <p class="cert-meta">Issued Sep 2026 &bull; Credential ID: C4715DFDC08707D2</p>
+              <p class="cert-skills">Skills: Microsoft Azure</p>
+              <a href="https://www.linkedin.com/in/ayush-agrawal0836/details/certifications/" target="_blank"
+                class="cert-view-btn" aria-label="View Microsoft Azure Certificate">
+                <span>View Certificate</span>
+                <svg viewBox="0 0 13 10" height="9px" width="13px" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Google Cloud -->
+          <div class="cert-item-box" data-aos="fade-up">
+            <div class="cert-company-logo-wrap">
+              <img src="src/assets/certificates/google-cloud.png" alt="Google Cloud Skills Boost logo" class="cert-company-logo" />
+            </div>
+            <div class="cert-content">
+              <article class="cert-title">Beginner: Google Cloud Cybersecurity Certificate</article>
+              <p class="cert-issuer">Google Cloud Skills Boost</p>
+              <p class="cert-meta">Issued Jan 2026 &bull; Credential ID: SfhFdb4w</p>
+              <p class="cert-skills">Skills: Cybersecurity</p>
+              <a href="https://www.linkedin.com/in/ayush-agrawal0836/details/certifications/" target="_blank"
+                class="cert-view-btn" aria-label="View Google Cloud Certificate">
+                <span>View Certificate</span>
+                <svg viewBox="0 0 13 10" height="9px" width="13px" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- JPMorgan Chase -->
+          <div class="cert-item-box" data-aos="fade-up">
+            <div class="cert-company-logo-wrap">
+              <img src="src/assets/certificates/jpmorgan.png" alt="JPMorgan Chase logo" class="cert-company-logo" />
+            </div>
+            <div class="cert-content">
+              <article class="cert-title">JPMorgan Chase &amp; Co. Software Engineering Job Simulation</article>
+              <p class="cert-issuer">J.P. Morgan &bull; Forage</p>
+              <p class="cert-meta">Issued May 2026 &bull; Credential ID: 693b07b14a2fa9e644eaf9c9</p>
+              <p class="cert-skills">Skills: Spring Framework, SQL, Java, Kafka</p>
+              <a href="https://www.linkedin.com/in/ayush-agrawal0836/details/certifications/" target="_blank"
+                class="cert-view-btn" aria-label="View JPMorgan Chase Certificate">
+                <span>View Certificate</span>
+                <svg viewBox="0 0 13 10" height="9px" width="13px" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- MongoDB -->
+          <div class="cert-item-box" data-aos="fade-up">
+            <div class="cert-company-logo-wrap">
+              <img src="src/assets/certificates/mongodb.png" alt="MongoDB logo" class="cert-company-logo" />
+            </div>
+            <div class="cert-content">
+              <article class="cert-title">MongoDB &amp; ICT Academy Skill-a-thon 2026</article>
+              <p class="cert-issuer">MongoDB &bull; ICT Academy</p>
+              <p class="cert-meta">Issued Aug 2026</p>
+              <p class="cert-skills">Skills: MongoDB, RAG with MongoDB, Vector Search</p>
+              <a href="https://www.linkedin.com/in/ayush-agrawal0836/details/certifications/" target="_blank"
+                class="cert-view-btn" aria-label="View MongoDB Certificate">
+                <span>View Certificate</span>
+                <svg viewBox="0 0 13 10" height="9px" width="13px" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hackathon 360 -->
+          <div class="cert-item-box" data-aos="fade-up">
+            <div class="cert-company-logo-wrap">
+              <img src="src/assets/certificates/eclearnix.png" alt="ECLearnix logo" class="cert-company-logo" />
+            </div>
+            <div class="cert-content">
+              <article class="cert-title">INTERNATIONAL LEVEL HACKATHON 360° 4.0 Certificate</article>
+              <p class="cert-issuer">ECLearnix Edtech Private Limited</p>
+              <p class="cert-meta">Issued May 2026 &bull; Credential ID: Q3PPRYA2JDF78</p>
+              <p class="cert-skills">Skills: Rapid Prototyping &bull; Problem Solving</p>
+              <a href="https://www.linkedin.com/in/ayush-agrawal0836/details/certifications/" target="_blank"
+                class="cert-view-btn" aria-label="View Hackathon Certificate">
+                <span>View Certificate</span>
+                <svg viewBox="0 0 13 10" height="9px" width="13px" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- certifications section ends -->
   </main>
   <!-- main ends here -->
 
@@ -499,14 +754,14 @@
             <article>GetinTouch();</article>
           </div>
           <div class="logos">
-            <a href="https://www.instagram.com" target="_blank" tabindex="0"
-              aria-label="My instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
+            <a href="https://www.instagram.com" target="_blank" tabindex="0" aria-label="My instagram"><svg
+                viewBox="0 0 448 512" class="SocialHandle">
                 <path
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1z" />
               </svg></a>
 
-            <a href="https://www.linkedin.com/in/ayush-agrawal-2b23a5330" target="_blank"
-              aria-label="My Linkdin"><svg class="SocialHandle" viewBox="0 0 448 512">
+            <a href="http://www.linkedin.com/in/ayush-agrawal0836" target="_blank" aria-label="My LinkedIn"><svg
+                class="SocialHandle" viewBox="0 0 448 512">
                 <path
                   d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
               </svg></a>
@@ -517,7 +772,16 @@
                   d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
               </svg></a>
 
-            <a href="mailto:ayushagrawal0429@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+            <a href="https://leetcode.com/u/Ayush17514/" target="_blank" aria-label="My LeetCode">
+              <svg viewBox="0 0 24 24" class="SocialHandle">
+                <path fill="#FFA116"
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.874 5.874 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.96 3.825c.347.015.704.01 1.05-.015a6.002 6.002 0 0 0 2.257-.655l4.066-2.438a1.372 1.372 0 0 0 .524-1.892 1.375 1.375 0 0 0-1.89-.524l-4.067 2.438a3.25 3.25 0 0 1-1.222.354c-.19.009-.38-.003-.569-.035a3.197 3.197 0 0 1-2.673-2.062 3.167 3.167 0 0 1-.188-.549 2.784 2.784 0 0 1-.033-1.274 2.85 2.85 0 0 1 .654-1.137l3.854-4.126 5.405-5.788A1.376 1.376 0 0 0 13.483 0z" />
+                <path fill="#ffffff"
+                  d="m14.53 11.085-7.002 4.2a1.373 1.373 0 0 0-.524 1.892 1.375 1.375 0 0 0 1.89.524l7.002-4.2a1.375 1.375 0 0 0 .524-1.892 1.375 1.375 0 0 0-1.89-.524z" />
+              </svg>
+            </a>
+
+            <a href="mailto:Ayushagrawal0429@gmail.com" target="_blank" aria-label="My Gmail"><svg id="GmailLogo"
                 viewBox="0 0 512 512">
                 <path
                   d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
@@ -525,7 +789,8 @@
           </div>
         </div>
         <div class="footer-avatar-container">
-          <img src="src/png/footer-avatar-vinod.png" alt="animation-head" class="footer-avatar-img" id="footer-wala-avatar"/>
+          <img src="src/assets/ui/footer-avatar.png" alt="animation-head" class="footer-avatar-img"
+            id="footer-wala-avatar" />
           <div class="footer-avatar-face">
             <div class="footer-avatar-eye footer-left-eye">
               <div class="footer-pupil"></div>
@@ -554,8 +819,7 @@
 
   <script>
     function openURL() {
-      var url = "src/pdf/Ayush Agrawal Resume.pdf";
-screenTop
+      var url = "src/assets/pdf/Ayush_Agrawal_Resume_.pdf";
       window.open(url, "_blank");
     }
   </script>
@@ -595,8 +859,6 @@ screenTop
       });
     });
   </script>
- <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-
 </body>
 
 </html>
